@@ -6,14 +6,12 @@
 
 **********************************/
 
-#define FREAM_RATE  (60U)
 
-/**********************************
+/*********************************
 
 *Œ^’è‹`
 
-**********************************/
-
+*********************************/
 
 
 /**********************************
@@ -22,6 +20,7 @@
 
 **********************************/
 
-void FreamControl_Initialize(void);
-void FreamControl_Update(void);
+int GameClearScene_Initialize(void);
+void GameClearScene_Update(void);
+void GameClearScene_Draw(void);
 
