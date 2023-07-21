@@ -1,0 +1,84 @@
+#include"SceneManager.h"
+#include"TitleScene.h"
+#include"GameMainScene.h"
+#include"GameClearScene.h"
+#include"GameOverScene.h"
+
+/****************************************
+
+*マクロ定義
+
+****************************************/
+
+
+/************************************
+
+＊型定義
+
+*************************************/
+
+
+/************************************
+
+*変数宣言
+
+*************************************/
+
+GAME_MODE Game_Mode;
+GAME_MODE Next_Mode;
+
+/************************************
+
+*プロトタイプ宣言
+
+*************************************/
+
+
+/****************************************
+
+*シーン管理機能：初期化処理
+
+* 引　数：ゲームモード情報
+
+*戻り値：なし
+
+****************************************/
+
+int SceneManager_Initialize(GAME_MODE mode)
+{
+	int Read_Error;
+
+	//シーン読み込み処理
+	//タイトル画面
+	Read_Error = TitleScene_Initialize();
+	if (Read_Error == D_ERROR)
+	{
+		return D_ERROR;
+	}
+
+	//ゲームメイン画面
+	Read_Error = GameMainScene_Initialize();
+	if (Read_Error == D_ERROR)
+	{
+		return D_ERROR;
+	}
+
+	//ゲームクリア画面
+	Read_Error = GameClearScene_Initialize();
+	if (Read_Error == D_ERROR)
+	{
+		return D_ERROR;
+	}
+
+	//ゲームオーバー画面
+	Read_Error = GameOverscene_Initialize();
+	if (Read_Error == D_ERROR)
+	{
+		return D_ERROR;
+	}
+
+	Game_Mode = mode;
+	Next_Mode = Game_Mode;
+
+	return Read_Error;
+}
