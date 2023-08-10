@@ -46,8 +46,7 @@
 
 **************************************/
 
-int WINAPI Winmain(_In_HINSTANCE hInstance, _In_opt_HINSTANCE hPrevInstance,
-	_In_LPSTR lpCmdLine, _In_int nShowCmd)
+int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR IpCmdLine, _In_ int nShowCmd)
 {
 
 	//ウィンドウタイトル設定
@@ -65,8 +64,8 @@ int WINAPI Winmain(_In_HINSTANCE hInstance, _In_opt_HINSTANCE hPrevInstance,
 	}
 
 	//各機能の初期化処理
-	FrameControl_Initialize();    //フレームレート制御機能
-	Input_Initialize();　　　　　//入力制御機能
+	FreamControl_Initialize();    //フレームレート制御機能
+	Input_Initialize();           //入力制御機能
 
 
 	//シーンマネージャ初期化処理
@@ -80,7 +79,7 @@ int WINAPI Winmain(_In_HINSTANCE hInstance, _In_opt_HINSTANCE hPrevInstance,
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	//文字サイズを設定
-	GetFontSize(FONT_SIZE);
+	SetFontSize(FONT_SIZE);
 
 	//ゲームループ
 	while (ProcessMessage() != D_ERROR && Input_Escape() == FALSE)
