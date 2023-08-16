@@ -268,7 +268,7 @@ void CreateBlock(void)
 *戻り値：なし
 
 ****************************************/
-void SelevtBlock(void)
+void SelectBlock(void)
 {
 	int TmpBlock;
 	int Result;
@@ -391,7 +391,7 @@ void FadeOutBlock(void)
 	}
 
 	//描画モードをノーブレンドにする
-	GetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
+	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
 
 	BlendMode -= 5;
 

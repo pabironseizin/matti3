@@ -71,7 +71,7 @@ int SceneManager_Initialize(GAME_MODE mode)
 	}
 
 	//ゲームオーバー画面
-	Read_Error = GameOverscene_Initialize();
+	Read_Error = GameOverScene_Initialize();
 	if (Read_Error == D_ERROR)
 	{
 		return D_ERROR;
