@@ -57,6 +57,9 @@ int GameMainScene_Initialize(void)
 	//画像読込み
 	LoadDivGraph("images/number.png", NUMBER_IMAGE_MAX, NUMBER_IMAGE_MAX, 1, 60, 120, NumberImage);
 
+	//ステージ初期加処理
+	ret = StageInitialize();
+
 	//エラーチェック
 	for (i = 0; i < NUMBER_IMAGE_MAX; i++)
 	{
