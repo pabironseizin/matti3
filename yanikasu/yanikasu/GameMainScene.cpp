@@ -83,6 +83,7 @@ else
 	GameLevel++;   //ゲームレベルの更新
 	Set_StageMission(3);  //ミッションを増やす
 }
+
 GameTime = TIMELIMIT;   //制限時間の初期化
 
 return ret;
